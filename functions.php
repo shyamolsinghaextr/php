@@ -10,6 +10,8 @@
   
   <?php  
 	
+	include 'code.php';
+	
 	function xyz(int $x, int $y):int {
 		$z = $x + $y;
 		return $z;
@@ -22,7 +24,7 @@
 	
 
 	function sum($y, int ...$x):int {
-		//$x = array(41,41,54,74);
+		
 		$n = 0;
 		$len = count($x);
 		for($i = 0; $i < $len; $i++) {
