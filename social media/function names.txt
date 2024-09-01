@@ -1,0 +1,10 @@
+1. registration 
+2. log 
+3. forget password 
+4. profile 
+5. new feed 
+6. friend list 
+7. search(post, frind) 
+8. commenting 
+9. like 
+10. posting (img and text)

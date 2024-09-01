@@ -29,7 +29,7 @@
 	echo '<br>';
 	
 	$startdate = strtotime("today");
-	$enddate = strtotime("+8 days", $startdate);
+	$enddate = strtotime("+365 days", $startdate);
 	echo date("Y-m-d h:i:sa", $startdate);
 	echo '<br>';
 	echo date("Y-m-d h:i:sa", $enddate);
