@@ -24,10 +24,15 @@ if(isset($_POST["submit"])) {
 	$Tempname = $_FILES['fileToUpload']['tmp_name'];
 	$Error  = $_FILES['fileToUpload']['error'];
 	
-    $target_dir = "uploads/";
-    $target_file = $target_dir . basename($Filename);
-	$imageFileType = pathinfo($target_file, PATHINFO_EXTENSION);
+    $target_file = "uploads/" . basename($Filename);
+	move_uploaded_file($Tempname, $target_file);
 	
+	echo $Size;
+	
+	
+	//$imageFileType = pathinfo($target_file, PATHINFO_EXTENSION);
+	
+	/*
 	$uploadOk = 1;
 	
     if(
@@ -59,8 +64,6 @@ if(isset($_POST["submit"])) {
         $uploadOk = 0;
     }
 
-
-
     if ($uploadOk == 0) {
         echo "Sorry, your file was not uploaded.";
     } else {
@@ -70,7 +73,10 @@ if(isset($_POST["submit"])) {
             echo "Sorry, there was an error uploading your file.";
         }
     }
+	*/
 }
+
+
 ?>
 
 <script src="assets/js/bootstrap.min.js"></script>
